@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card mt-3">
+            <div class="card-header">
+                <h4>Just Checking the required things</h4>
+                <small>username=Tawabullah</small>,
+                <small>password=123</small>
+            </div>
+            <div class="card-body">
+                <form #form="ngForm" (submit)="LoginToDashboard(form.value)">
+                    <div class="form-group">
+                        <label for="UserName">UserName</label>
+                        <input type="text" name="username" ngModel id="UserName" required="required" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" ngModel id="password" required="required" class="form-control">
+                    </div>
+                    <button class="btn btn-success  mt-3" [disabled]="form.invalid" style="float: right;">Login</button>
+                </form>
+            </div>
+        </div>
+     
+    </div>
+</div>
